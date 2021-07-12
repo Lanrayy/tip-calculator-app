@@ -60,14 +60,23 @@
     background-color: hsl(0, 0%, 100%);
     height: 783px;
     border-radius: 20px 20px 0px 0px;
-    padding: 10px;
+    padding: 20px;
+  }
+
+  .container {
+    margin-bottom: 20px;
+  }
+
+  .top-container {
+    width: 100%;
+    margin-bottom: 10px;
   }
 
   .bill-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 90%;
+    width: 100%;
   }
 
   .title {
@@ -75,8 +84,12 @@
     color: hsl(184, 14%, 56%);
   }
 
-  .bill-input-container,
   .num-of-people-container {
+    width: 100%;
+  }
+
+  .bill-input-container,
+  .num-of-people-input-container {
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -94,6 +107,11 @@
   .tip-button-row {
     display: flex;
     margin-bottom: 20px;
+  }
+
+  .tip-button-row:last-of-type {
+    display: flex;
+    margin-bottom: 0px;
   }
 
   .tip-button:first-child {
@@ -120,8 +138,8 @@
     justify-content: center;
 
     background-color: hsl(183, 100%, 15%);
-    height: 200px;
-    width: 90%;
+    width: 100%;
+    height: 250px;
     border-radius: 10px;
   }
 
