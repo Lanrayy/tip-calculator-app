@@ -1,4 +1,4 @@
-# Frontend Mentor - Tip calculator app solution
+# Frontend Mentor - Tip calculator App
 
 This is a solution to the [Tip calculator app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/tip-calculator-app-ugJNGbJUX). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
@@ -21,6 +21,7 @@ This is a solution to the [Tip calculator app challenge on Frontend Mentor](http
 ## Overview
 
 ### The challenge
+The challenge  is to create a tip calculator.
 
 Users should be able to:
 
@@ -66,6 +67,10 @@ Use this section to recap over some of your major learnings while working throug
 
 To see how you can add code snippets, see below:
 
+Day 1
+
+I will be experimenting with mobile first design in this porject.
+
 ```html
 <h1>Some HTML code I'm proud of</h1>
 ```
@@ -99,9 +104,10 @@ Use this section to outline areas that you want to continue focusing on in futur
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
+- Website - [Lanre Sodeinde](https://www.google.com)
+- Frontend Mentor - [@Lanrayy](https://www.frontendmentor.io/profile/Lanrayy)
 - Twitter - [@yourusername](https://www.twitter.com/yourusername)
+- GitHUb - [@Lanrayy](https://www.github.com/Lanrayy)
 
 **Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
 

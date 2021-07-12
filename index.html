@@ -3,11 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Tip calculator app</title>
-
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;500;700">
+  <link rel="stylesheet" href="styles.css">
+  <title>Tip calculator app</title>
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution { font-size: 11px; text-align: center; }
@@ -15,30 +14,75 @@
   </style>
 </head>
 <body>
-
-  Bill
-
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
-
-  Number of People
-
-  Tip Amount
-  / person
-
-  Total
-  / person
-
-  Reset
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+  <div class="app-title-container">
+    <p>SPLI</p>
+    <p>TTER</p>
   </div>
+  <div class="main-container">
+    <div class="bill-container">
+      <p class="title">Bill</p>
+      <div class="bill-input-container">
+        <p class="dollar-sign">$</p>
+        <input class="bill-input" type="number" placeholder="142.55"/>
+      </div>
+      
+
+      <p class="title">Select Tip %</p> 
+      <div class="tip-button-container">
+        <div class="tip-button-row">
+          <button class="button tip-button">5%</button>
+          <button class="button tip-button">10%</button>
+        </div>
+        <div class="tip-button-row">
+          <button class="button tip-button">15%</button>
+          <button class="button tip-button">25%</button>
+        </div>
+        <div class="tip-button-row">
+          <button class="button tip-button">50%</button>
+          <input class="custom-input" type="number" placeholder="Custom"/>
+        </div>
+        
+        
+      </div>
+
+      <p class="title">Number of people</p>
+      <div class="num-of-people-container">
+        <p class="dollar-sign">$</p>
+        <input class="num-of-people" type="number" placeholder="5">
+      </div>
+      
+
+    </div>
+
+    <div class="form-results-container">
+      <div class="tip-amount"> 
+        <div class="results-title">
+          <p>Tip Amount</p>
+          <p>/ person</p>
+        </div>
+        <div>
+          <p class="results tip-amount-result-display">$4.27</p>
+        </div>
+      </div>
+    
+      <div class="total">
+        <div class="results-title">
+          <p>Total</p>
+          <p>/ person</p>
+        </div>
+        <div>
+          <p class="results total-result-display">$32.79</p>
+        </div>
+      </div>
+      <button class="reset-button">RESET</button>
+    </div>
+
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Your Name Here</a>.
+    </div>
+  </div>
+
+  <script src="scripts/scripts.js"></script>
 </body>
 </html>
