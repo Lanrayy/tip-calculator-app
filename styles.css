@@ -6,129 +6,203 @@
 
 /* MOBILE FIRST */
 
-@media only screen and (max-width: 375px) {
-  body {
-    background-color: hsl(185, 41%, 84%);
-    font-family: Space Mono, monospace;
-    height: 933px;
-  }
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* background-color: hsl(185, 41%, 84%); */
+  font-family: Space Mono, monospace;
+}
 
-  button {
-    font-family: Space Mono, monospace;
-    min-width: 100px;
-    height: 50px;
-    border: none;
-    border-radius: 5px;
-    font-size: 20px;
-    font-weight: 700;
-  }
+.body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: hsl(185, 41%, 84%);
+  height: 933px;
+  width: 375px;
+}
 
-  .dollar-sign {
-    font-size: 24px;
-    color: hsl(186, 14%, 43%);
-  }
+button {
+  font-family: Space Mono, monospace;
+  min-width: 100px;
+  height: 50px;
+  border: none;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: 700;
+}
 
-  input {
-    font-family: Space Mono, monospace;
-    font-weight: 700;
-    font-size: 24px;
-    width: 200px;
-    height: 100%;
-    border: none;
-    background-color: hsl(185, 41%, 84%);
-    text-align: right;
-    padding-right: 10px;
-  }
+.dollar-sign {
+  font-size: 24px;
+  color: hsl(186, 14%, 43%);
+}
 
-  .app-title-container {
-    width: inherit;
-    height: 150px;
+input {
+  font-family: Space Mono, monospace;
+  font-weight: 700;
+  font-size: 24px;
+  width: 200px;
+  height: 100%;
+  border: none;
+  background-color: hsl(185, 41%, 84%);
+  text-align: right;
+  padding-right: 10px;
+}
+
+.app-title-container {
+  width: inherit;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 5px;
+  color: hsl(184, 14%, 43%);
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: hsl(0, 0%, 100%);
+  height: 783px;
+  border-radius: 20px 20px 0px 0px;
+  padding: 20px;
+}
+
+.container {
+  margin-bottom: 20px;
+}
+
+.top-container {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.bill-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
+.title {
+  font-weight: 700;
+  color: hsl(184, 14%, 56%);
+}
+
+.num-of-people-container {
+  width: 100%;
+}
+
+.bill-input-container,
+.num-of-people-input-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 40px;
+  background-color: hsl(185, 41%, 84%);
+}
+
+.tip-button-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
+.tip-button-row {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.tip-button-row:last-of-type {
+  display: flex;
+  margin-bottom: 0px;
+}
+
+.tip-button:first-child {
+  margin-right: 15px;
+}
+
+.tip-button {
+  width: 150px;
+  background-color: hsl(183, 100%, 15%);
+  color: hsl(0, 0%, 100%);
+}
+
+.custom-input {
+  width: 150px;
+  border-radius: 5px;
+  text-align: right;
+  padding-right: 10px;
+}
+
+.form-results-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background-color: hsl(183, 100%, 15%);
+  width: 100%;
+  height: 250px;
+  border-radius: 10px;
+}
+
+.tip-amount,
+.total {
+  display: flex;
+  width: 90%;
+  justify-content: space-between;
+  align-items: center;
+  /* border: 1px solid black; */
+}
+
+.tip-amount .results-title:first-child,
+.total .results-title:first-child {
+  color: white;
+}
+
+.results {
+  font-size: 24px;
+  font-weight: 700;
+  color: hsl(172, 67%, 45%);
+}
+
+.reset-button {
+  width: 90%;
+  background-color: hsl(172, 67%, 45%);
+  color: hsl(183, 100%, 15%);
+  font-weight: 700;
+}
+
+/* DESKTOP STYLES */
+@media only screen and (min-width: 1440px) {
+  .body {
     display: flex;
-    justify-content: center;
     flex-direction: column;
     align-items: center;
-    font-size: 24px;
-    font-weight: 700;
-    letter-spacing: 5px;
-    color: hsl(184, 14%, 43%);
+    justify-content: center;
+
+    background-color: rgb(50, 50, 140);
+    width: 1440px;
+    height: 1024px;
   }
 
   .main-container {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     background-color: hsl(0, 0%, 100%);
-    height: 783px;
-    border-radius: 20px 20px 0px 0px;
-    padding: 20px;
-  }
-
-  .container {
-    margin-bottom: 20px;
-  }
-
-  .top-container {
-    width: 100%;
-    margin-bottom: 10px;
-  }
-
-  .bill-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
-  }
-
-  .title {
-    font-weight: 700;
-    color: hsl(184, 14%, 56%);
-  }
-
-  .num-of-people-container {
-    width: 100%;
-  }
-
-  .bill-input-container,
-  .num-of-people-input-container {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    height: 40px;
-    background-color: hsl(185, 41%, 84%);
-  }
-
-  .tip-button-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
-  }
-
-  .tip-button-row {
-    display: flex;
-    margin-bottom: 20px;
-  }
-
-  .tip-button-row:last-of-type {
-    display: flex;
-    margin-bottom: 0px;
-  }
-
-  .tip-button:first-child {
-    margin-right: 15px;
-  }
-
-  .tip-button {
-    width: 150px;
-    background-color: hsl(183, 100%, 15%);
-    color: hsl(0, 0%, 100%);
-  }
-
-  .custom-input {
-    width: 150px;
-    border-radius: 5px;
-    text-align: right;
-    padding-right: 10px;
+    height: 500px;
+    width: 65%;
+    border-radius: 20px;
+    padding: 30px;
+    border: 1px solid red;
   }
 
   .form-results-container {
@@ -139,41 +213,11 @@
 
     background-color: hsl(183, 100%, 15%);
     width: 100%;
-    height: 250px;
-    border-radius: 10px;
-  }
-
-  .tip-amount,
-  .total {
-    display: flex;
-    width: 90%;
-    justify-content: space-between;
-    align-items: center;
-    /* border: 1px solid black; */
-  }
-
-  .tip-amount .results-title:first-child,
-  .total .results-title:first-child {
-    color: white;
+    height: 450px;
+    border-radius: 20px;
   }
 
   .results {
-    font-size: 24px;
-    font-weight: 700;
-    color: hsl(172, 67%, 45%);
-  }
-
-  .reset-button {
-    width: 90%;
-    background-color: hsl(172, 67%, 45%);
-    color: hsl(183, 100%, 15%);
-    font-weight: 700;
+    font-size: 44px;
   }
 }
-
-/* DESKTOP STYLES
-@media only screen and (min-width: 375px) and (max-width: 1440px) {
-  body {
-    background-color: blue;
-  }
-} */
