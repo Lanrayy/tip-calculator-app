@@ -1,4 +1,4 @@
-// TIP AMOUNT RESULTS
+//SET VARIABLE
 let tipAmountPerPerson = document.querySelector(".tip-amount-result-display");
 let totalAmountPerPerson = document.querySelector(".total-result-display");
 let billInput = document.querySelector(".bill-input");
@@ -8,26 +8,20 @@ let billAmount = 0;
 let tipAmount = 0;
 let numOfPeople = 1;
 
+//TIP AMOUNT
+function submit(element, num){
+    tipAmount = num/100;
+    let buttonName = element.classList[0];
+    setColour(buttonName);
+    calculateResults();
+}
+
+
 // BILL INPUT
 billInput.addEventListener("input", function(){
-    console.log(billInput.value);
     billAmount = parseFloat(billInput.value).toFixed(2);
     calculateResults();
 });
-
-
-//TIP AMOUNT
-function submit(element, num){
-    console.log(num)
-    tipAmount = num/100;
-    console.log(tipAmount);
-    let buttonName = element.classList[0];
-    console.log(buttonName)
-    setColour(buttonName);
-    let list = element.classList
-    console.log(list);
-    calculateResults();
-}
 
 // NUMBER OF PEOPLE INPUT
 numOfPeopleInput.addEventListener("input", function(){
@@ -37,27 +31,22 @@ numOfPeopleInput.addEventListener("input", function(){
 
 // CUSTOM INPUT
 customInput.addEventListener("input", function(){
-    console.log(custom.value)
-    tipAmount= custom.value/100;
+    tipAmount= customInput.value/100;
     calculateResults()
 });
 
 
 function calculateResults(){
-    console.log(tipAmount);
-    console.log(numOfPeople);
-    console.log(billAmount);
     // Calculate Tip Amount per Person
     tipAmountPerPerson.innerHTML = billAmount*tipAmount/numOfPeople;
 
-    // Calculate Tip Amount per Person
+    // Calculate tip
     let tip = (billAmount*tipAmount/numOfPeople).toFixed(2);
     tip = parseFloat(tip);
     tipAmountPerPerson.innerHTML = `$` + tip;
 
     // Calculate Total per Person
     total = (billAmount/numOfPeople) + tip;
-    console.log(total);
     totalAmountPerPerson.innerHTML = `$` + total;
 };
 
