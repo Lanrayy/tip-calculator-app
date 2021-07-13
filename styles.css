@@ -145,10 +145,10 @@ input:focus {
   color: hsl(183, 100%, 15%);
 }
 
-.tip-button:focus {
+/* .tip-button:focus {
   background-color: hsl(172, 67%, 45%);
   color: hsl(183, 100%, 15%);
-}
+} */
 
 .left {
   margin-right: 15px;
