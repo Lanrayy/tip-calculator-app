@@ -14,7 +14,7 @@ body {
   font-family: Space Mono, monospace;
 }
 
-.body {
+.body-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -31,6 +31,10 @@ button {
   border-radius: 5px;
   font-size: 20px;
   font-weight: 700;
+}
+
+button:hover {
+  cursor: pointer;
 }
 
 .dollar-sign {
@@ -78,7 +82,7 @@ input {
 }
 
 .top-container {
-  width: 100%;
+  /* width: 375px; */
   margin-bottom: 10px;
 }
 
@@ -153,6 +157,14 @@ input {
   border-radius: 10px;
 }
 
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
 .tip-amount,
 .total {
   display: flex;
@@ -182,7 +194,7 @@ input {
 
 /* DESKTOP STYLES */
 @media only screen and (min-width: 1440px) {
-  .body {
+  .body-container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -205,19 +217,47 @@ input {
     border: 1px solid red;
   }
 
+  .top-container {
+    height: 450px;
+    width: 700px;
+    border: 1px solid red;
+  }
+
+  .tip-button-container {
+  }
+
+  .tip-button-row {
+    border: 1px solid blue;
+  }
+
+  .tip-button {
+    width: 100px;
+    background-color: hsl(183, 100%, 15%);
+    color: hsl(0, 0%, 100%);
+  }
+
   .form-results-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    padding: 20px;
 
     background-color: hsl(183, 100%, 15%);
-    width: 100%;
+    width: 700px;
     height: 450px;
     border-radius: 20px;
   }
 
   .results {
     font-size: 44px;
+  }
+
+  .info {
+    margin-top: 20px;
+  }
+
+  .reset-button {
+    margin-bottom: 20px;
   }
 }
