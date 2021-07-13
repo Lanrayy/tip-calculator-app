@@ -68,7 +68,27 @@ Use this section to recap over some of your major learnings while working throug
 
 To see how you can add code snippets, see below:
 
-Day 1
+Day 1:
+
+I learnt how to change input's placeholder text colour.
+
+```css
+input::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: red;
+  opacity: 1; /* Firefox */
+}
+
+input:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: red;
+}
+
+input::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: red;
+}
+```
 
 I will be experimenting with mobile first design in this porject.
 

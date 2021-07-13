@@ -16,7 +16,6 @@ function submit(element, num){
     calculateResults();
 }
 
-
 // BILL INPUT
 billInput.addEventListener("input", function(){
     billAmount = parseFloat(billInput.value).toFixed(2);

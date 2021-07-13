@@ -37,11 +37,6 @@ button:hover {
   cursor: pointer;
 }
 
-.dollar-sign {
-  font-size: 24px;
-  color: hsl(186, 14%, 43%);
-}
-
 input {
   font-family: Space Mono, monospace;
   font-weight: 700;
@@ -50,13 +45,29 @@ input {
   height: 100%;
   border: none;
   background-color: hsl(185, 41%, 84%);
-  color: hsl(183, 100%, 15%);
+  color: hsl(184, 14%, 56%);
   text-align: right;
   padding-right: 10px;
 }
 
 input:focus {
   outline: none;
+}
+
+input::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: hsl(184, 14%, 56%);
+  opacity: 1; /* Firefox */
+}
+
+input:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: hsl(184, 14%, 56%);
+}
+
+input::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: hsl(184, 14%, 56%);
 }
 
 .app-title-container {
@@ -76,6 +87,7 @@ input:focus {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-evenly;
   background-color: hsl(0, 0%, 100%);
   height: 783px;
   width: 375px;
@@ -122,6 +134,13 @@ input:focus {
   background-color: hsl(185, 41%, 84%);
 }
 
+.input-icon {
+  height: 18px;
+  justify-self: center;
+  align-self: center;
+  margin-left: 10px;
+}
+
 .tip-button-container {
   display: flex;
   flex-flow: row wrap;
@@ -157,11 +176,27 @@ input:focus {
   color: hsl(183, 100%, 15%);
 }
 
+.custom-input::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: hsl(183, 100%, 15%);
+  opacity: 1; /* Firefox */
+}
+
+.custom-input:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: hsl(183, 100%, 15%);
+}
+
+.custom-input::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: hsl(183, 100%, 15%);
+}
+
 .form-results-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
 
   background-color: hsl(183, 100%, 15%);
   width: 100%;
@@ -175,6 +210,10 @@ input:focus {
   align-items: center;
   justify-content: center;
   width: 100%;
+}
+
+.tip-amount {
+  margin-bottom: 20px;
 }
 
 .tip-amount,
@@ -191,8 +230,19 @@ input:focus {
   color: white;
 }
 
+.results-title > p:first-of-type {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.results-title > p:last-of-type {
+  color: hsl(184, 14%, 56%);
+  font-size: 12px;
+  font-weight: 400;
+}
+
 .results {
-  font-size: 24px;
+  font-size: 28px;
   font-weight: 700;
   color: hsl(172, 67%, 45%);
 }
@@ -215,8 +265,6 @@ input:focus {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
-    background-color: rgb(50, 50, 140);
     width: 1440px;
     height: 1024px;
   }
@@ -231,6 +279,7 @@ input:focus {
     width: 900px;
     border-radius: 20px;
     padding: 30px;
+    box-shadow: 0px 12px 20px -20px hsl(172, 67%, 45%);
   }
 
   .tip-button-container {
@@ -238,6 +287,9 @@ input:focus {
   }
 
   .top-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
     height: 100%;
     width: 400px;
   }
@@ -254,7 +306,6 @@ input:focus {
   .tip-button {
     width: 110px;
     margin-bottom: 15px;
-    /* margin-right: 15px; */
   }
 
   .custom-input {
@@ -284,6 +335,11 @@ input:focus {
 
   .info {
     margin-top: 20px;
+  }
+
+  .tip-amount,
+  .total {
+    margin-bottom: 30px;
   }
 
   .reset-button {
