@@ -159,7 +159,7 @@ input:focus {
   border-radius: 5px;
   text-align: right;
   padding-right: 10px;
-  color: black;
+  color: hsl(183, 100%, 15%);
 }
 
 .form-results-container {
@@ -207,6 +207,10 @@ input:focus {
   background-color: hsl(172, 67%, 45%);
   color: hsl(183, 100%, 15%);
   font-weight: 700;
+}
+
+.reset-button:hover {
+  background-color: hsl(185, 41%, 84%);
 }
 
 /* DESKTOP STYLES */
