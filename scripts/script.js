@@ -24,6 +24,8 @@ billInput.addEventListener("input", function(){
 
 // NUMBER OF PEOPLE INPUT
 numOfPeopleInput.addEventListener("input", function(){
+    
+
     numOfPeople = parseInt(numOfPeopleInput.value, 10);
     calculateResults()
 });
@@ -36,17 +38,26 @@ customInput.addEventListener("input", function(){
 
 
 function calculateResults(){
-    // Calculate Tip Amount per Person
+
+    if(numOfPeopleInput.value == 0){
+        document.querySelector(".num-of-people-input-container").style.border = "2px solid red"
+        tipAmountPerPerson.innerHTML = "$0.00";
+        totalAmountPerPerson.innerHTML = "$0.00";
+    }
+    else{
+        // Calculate Tip Amount per Person
     tipAmountPerPerson.innerHTML = billAmount*tipAmount/numOfPeople;
 
     // Calculate tip
     let tip = (billAmount*tipAmount/numOfPeople).toFixed(2);
-    tip = parseFloat(tip);
+    tip = parseFloat(tip).toFixed(2);
     tipAmountPerPerson.innerHTML = `$` + tip;
 
     // Calculate Total per Person
-    total = (billAmount/numOfPeople) + tip;
+    total = ((billAmount/numOfPeople) + tip).toFixed(2);
     totalAmountPerPerson.innerHTML = `$` + total;
+    }
+    
 };
 
 // BUTTONS BACKGROUND
@@ -74,7 +85,7 @@ let resetColours = function(){
     fiftyPercent.style.backgroundColor = "hsl(183, 100%, 15%)";
     fiftyPercent.style.color = "hsl(0, 0%, 100%)"; //white
 
-    customPercent.style.backgroundColor = "hsl(185, 41%, 84%)";
+    customPercent.style.border = "1px solid hsl(185, 41%, 84%)";
 
 }
 
@@ -109,6 +120,15 @@ resetButton.addEventListener("click", function(){
     totalAmountPerPerson.innerHTML = "$0.00";
 })
 
+//focus on bill input
+billInput.addEventListener("focus", function(){
+    document.querySelector(".bill-container").style.border = "2px solid hsl(172, 67%, 45%)"
+})
+
+//focus no of people input
+numOfPeopleInput.addEventListener("focus", function(){
+    document.querySelector(".num-of-people-input-container").style.border = "2px solid hsl(172, 67%, 45%)"
+})
 
 
 

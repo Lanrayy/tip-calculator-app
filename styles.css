@@ -45,9 +45,20 @@ input {
   height: 100%;
   border: none;
   background-color: hsl(185, 41%, 84%);
-  color: hsl(184, 14%, 56%);
+  color: hsl(186, 14%, 43%);
   text-align: right;
   padding-right: 10px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
 }
 
 input:focus {
@@ -111,9 +122,12 @@ input::-ms-input-placeholder {
   width: 100%;
 }
 
+.bill-container:hover {
+  cursor: pointer;
+}
+
 .bill-input:focus {
   outline: none;
-  /* border: 2px solid red; */
 }
 
 .title {
@@ -123,6 +137,10 @@ input::-ms-input-placeholder {
 
 .num-of-people-container {
   width: 100%;
+}
+
+.num-of-people-container:hover {
+  cursor: pointer;
 }
 
 .bill-input-container,
@@ -176,20 +194,25 @@ input::-ms-input-placeholder {
   color: hsl(183, 100%, 15%);
 }
 
+.custom-input:hover {
+  cursor: pointer;
+  background-color: hsl(185, 41%, 84%);
+}
+
 .custom-input::placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: hsl(183, 100%, 15%);
+  color: hsl(186, 14%, 43%);
   opacity: 1; /* Firefox */
 }
 
 .custom-input:-ms-input-placeholder {
   /* Internet Explorer 10-11 */
-  color: hsl(183, 100%, 15%);
+  color: hsl(186, 14%, 43%);
 }
 
 .custom-input::-ms-input-placeholder {
   /* Microsoft Edge */
-  color: hsl(183, 100%, 15%);
+  color: hsl(186, 14%, 43%);
 }
 
 .form-results-container {
