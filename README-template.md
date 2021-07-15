@@ -6,7 +6,7 @@ This is a solution to the [Tip calculator app challenge on Frontend Mentor](http
 
 - [Overview](#overview)
   - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
+  - [Screenshots](#screenshots)
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
@@ -60,7 +60,7 @@ Mobile Design
 
 Day 1:
 
-I learnt how to change input element's placeholder text colour. Changing the placeholder colour is not standardised so you will have to specify specific styles for individual web browsers i.e.
+I learnt how to change input element's placeholder text colour. Changing the placeholder colour is not standardised across web browsers so you will have to specify specific styles for individual web browsers i.e.
 
 ```css
 input::placeholder {
@@ -83,6 +83,23 @@ input::-ms-input-placeholder {
 Day 2:
 
 I was experimenting with mobile first design in this project and I discovered the benfits of designing for mobile first. Since, 56% of the internet's traffic now comes from a mobile device it makes sense to make sure every website or app is optimised for mobile viewing. By using a mobile first methodology, adapting the app to a desktop view was significantly easier than the opposite. It was also a lot easier to plan a mobile view.
+
+Day 3:
+
+I learnt how to make the body 100% of the browser height. In order to centre the `body element`, you need to give the `html and body` element a height 100%. So the body element will automatically look to the `html element` for its height.
+
+```css
+/* Will not work*/
+body {
+  height: 100%;
+}
+
+/* You need to use this to make the height 100% of the browser height*/
+html,
+body {
+  height: 100%;
+}
+```
 
 ### Continued development
 
