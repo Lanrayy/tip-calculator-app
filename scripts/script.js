@@ -14,50 +14,50 @@ function submit(element, num){
     let buttonName = element.classList[0];
     setColour(buttonName);
     calculateResults();
-}
+};
 
-// BILL INPUT
+//WHEN THE VALUE OF THE BILL INPUT CHANGES, CALCULATE THE RESULTS
 billInput.addEventListener("input", function(){
     billAmount = parseFloat(billInput.value).toFixed(2);
     calculateResults();
 });
 
-// NUMBER OF PEOPLE INPUT
+//WHEN THE VALUE OF THE NUMPER OF PEOPLE INPUT CHANGES, CALCULATE THE RESULTS
 numOfPeopleInput.addEventListener("input", function(){
     
-
     numOfPeople = parseInt(numOfPeopleInput.value, 10);
     calculateResults()
 });
 
-// CUSTOM INPUT
+//WHEN THE VALUE OF THE CUSTOM INPUT CHANGES, CALCULATE THE RESULTS
 customInput.addEventListener("input", function(){
-    tipAmount= customInput.value/100;
+    tipAmount = customInput.value/100;
     calculateResults()
 });
 
 
 function calculateResults(){
-
+    //If the number of people input element has a value of zero
     if(numOfPeopleInput.value == 0){
         document.querySelector(".num-of-people-input-container").style.border = "2px solid red"
         tipAmountPerPerson.innerHTML = "$0.00";
         totalAmountPerPerson.innerHTML = "$0.00";
     }
     else{
-        // Calculate Tip Amount per Person
-    tipAmountPerPerson.innerHTML = billAmount*tipAmount/numOfPeople;
+        // Calculate the tip per person and display the result
+        let tip = ((billAmount*tipAmount)/numOfPeople);
+        tip = tip.toFixed(2); // returns a string
+        tip = parseFloat(tip);
+        tipAmountPerPerson.innerHTML = `$` + tip;
 
-    // Calculate tip
-    let tip = (billAmount*tipAmount/numOfPeople).toFixed(2);
-    tip = parseFloat(tip).toFixed(2);
-    tipAmountPerPerson.innerHTML = `$` + tip;
-
-    // Calculate Total per Person
-    total = ((billAmount/numOfPeople) + tip).toFixed(2);
-    totalAmountPerPerson.innerHTML = `$` + total;
+        // Calculate the total per person and display the result
+        let totalBillPerPerson = (billAmount/numOfPeople);
+        totalBillPerPerson.toFixed(2);
+        totalBillPerPerson = parseFloat(totalBillPerPerson);
+        total = (totalBillPerPerson + tip);
+        
+        totalAmountPerPerson.innerHTML = `$` + total;
     }
-    
 };
 
 // BUTTONS BACKGROUND
@@ -68,6 +68,9 @@ let twentyFivePercent = document.querySelector(".twentyFivePercent");
 let fiftyPercent = document.querySelector(".fiftyPercent");
 let customPercent = document.querySelector(".customPercent");
 
+
+//Reset coluur of all the buttons 
+//This fucntion is used in the reset button function
 let resetColours = function(){
     //change all existing colours and text to white on green
     fivePercent.style.backgroundColor = "hsl(183, 100%, 15%)";
@@ -86,10 +89,10 @@ let resetColours = function(){
     fiftyPercent.style.color = "hsl(0, 0%, 100%)"; //white
 
     customPercent.style.border = "1px solid hsl(185, 41%, 84%)";
+};
 
-}
 
-
+//This function sets the colour of the button that is clicked on 
 let setColour = function(buttonName){
     //Reset Colours
     resetColours();
@@ -98,11 +101,10 @@ let setColour = function(buttonName){
     buttonToChange = document.querySelector(`.${buttonName}`);
     buttonToChange.style.backgroundColor = "hsl(172, 67%, 45%)";
     buttonToChange.style.color = "hsl(183, 100%, 15%)";
-}
+};
 
-
+//If the reset button is clicked
 let resetButton = document.querySelector(".reset-button");
-
 resetButton.addEventListener("click", function(){
     //reset the colour of the buttonscolours
     resetColours();
@@ -118,20 +120,19 @@ resetButton.addEventListener("click", function(){
 
     tipAmountPerPerson.innerHTML = "$0.00";
     totalAmountPerPerson.innerHTML = "$0.00";
-})
+});
 
-//focus on bill input
+
+//If the bill input is focused, change the border colour
 billInput.addEventListener("focus", function(){
     document.querySelector(".bill-container").style.border = "2px solid hsl(172, 67%, 45%)"
-})
+});
 
-//focus no of people input
+
+//If the no. of people input is focused, change the border colour
 numOfPeopleInput.addEventListener("focus", function(){
     document.querySelector(".num-of-people-input-container").style.border = "2px solid hsl(172, 67%, 45%)"
-})
-
-
-
+});
 
 
 

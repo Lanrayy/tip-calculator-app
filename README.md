@@ -99,6 +99,11 @@ body {
 }
 ```
 
+Day 4:
+
+Javascript
+When you use `.toFixed()` to convert a number to decimal place, it returns string not a number. This introduced a bug into my code when adding the tip and bill per person.
+
 ### Continued development
 
 I will use this section to outline areas that I want to continue focusing on in future projects. These could be concepts I'm still not completely comfortable with or techniques I found useful that you want to refine and perfect.
