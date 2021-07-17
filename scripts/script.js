@@ -24,15 +24,26 @@ billInput.addEventListener("input", function(){
 
 //WHEN THE VALUE OF THE NUMPER OF PEOPLE INPUT CHANGES, CALCULATE THE RESULTS
 numOfPeopleInput.addEventListener("input", function(){
-    
     numOfPeople = parseInt(numOfPeopleInput.value, 10);
     calculateResults()
+});
+
+//IF A USER ENTERS ZER0 SHOW THE CANT BE ZERO MESSAGE
+//REMOVE IT IF THE USER ENTERS A NUMBER THAT IS NOT ZERO
+numOfPeopleInput.addEventListener("input", function(){
+    if(numOfPeopleInput.value == 0){
+        document.querySelector(".cant-be-zero").style.display = "flex";
+    }
+
+    if(numOfPeopleInput.value != 0){
+        document.querySelector(".cant-be-zero").style.display = "none";
+    }
 });
 
 //WHEN THE VALUE OF THE CUSTOM INPUT CHANGES, CALCULATE THE RESULTS
 customInput.addEventListener("input", function(){
     tipAmount = customInput.value/100;
-    calculateResults()
+    calculateResults();
 });
 
 
@@ -44,6 +55,7 @@ function calculateResults(){
         totalAmountPerPerson.innerHTML = "$0.00";
     }
     else{
+        document.querySelector(".num-of-people-input-container").style.border = "none"
         // Calculate the tip per person and display the result
         let tip = ((billAmount*tipAmount)/numOfPeople);
         tip = tip.toFixed(2); // returns a string
@@ -55,7 +67,6 @@ function calculateResults(){
         totalBillPerPerson.toFixed(2);
         totalBillPerPerson = parseFloat(totalBillPerPerson);
         total = (totalBillPerPerson + tip);
-        
         totalAmountPerPerson.innerHTML = `$` + total;
     }
 };

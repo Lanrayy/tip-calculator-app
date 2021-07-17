@@ -139,6 +139,17 @@ input::-ms-input-placeholder {
   width: 100%;
 }
 
+.num-of-people-title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cant-be-zero {
+  display: none;
+  color: red;
+  font-weight: 700;
+}
+
 .num-of-people-container:hover {
   cursor: pointer;
 }
